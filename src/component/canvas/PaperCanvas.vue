@@ -6,10 +6,16 @@
 
 export default {
   name: "component-canvas-canvas",
+  
   mounted () {
     if (process.env.VUE_ENV === "client") {
       const paper = require("paper");
       const canvas = document.getElementById("canvas");
+      paper.setup(canvas);
+      const rectShape = new paper.Rectangle(new paper.Point(0,0), new paper.Size(200,200));
+      const rect = new paper.Path.Rectangle(rectShape);
+      rect.fillColor = "blue";
+      paper.view.draw();
     }
   }
 };

@@ -21,6 +21,6 @@ export default {
 .container
   position: relative
   height: 100vh
-  width: 100vh
+  width: 100vw
 
 </style>
