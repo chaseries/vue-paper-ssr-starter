@@ -7,11 +7,9 @@
 export default {
   name: "component-canvas-canvas",
   mounted () {
-    console.log("Does the VUE_ENV === 'client'?", process.env.VUE_ENV === "client");
     if (process.env.VUE_ENV === "client") {
       const paper = require("paper");
       const canvas = document.getElementById("canvas");
-      console.log("paper is", paper);
     }
   }
 };
